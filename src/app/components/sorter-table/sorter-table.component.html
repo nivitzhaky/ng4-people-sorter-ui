@@ -1,0 +1,56 @@
+
+<!-- <div class="pos-f-t  header" >
+  <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md"> 
+    <div class="row navbar navbar-inverse bg-inverse navbar-toggleable-md text-center">POEPLE SORTER</div>
+    <div text-align= "center" class="row navbar navbar-inverse bg-inverse navbar-toggleable-md"><a class="site-title" href="#"> Kafka "persons" topic is sorted into "adults" and "kids" topics.  offloaded to mongodb for query </a></div> 
+  </nav>
+</div> -->
+
+
+<div class="row">
+  
+</div>
+<div class="row">
+  <div class="col col-sm-3">
+  </div>
+  <div class="col col-sm-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-sm-6">
+            <div ngbDropdown class="d-inline-block">
+              Batches
+            </div>
+          </div>
+          <div class="col-sm-3 text-right">
+              <input type="number" class="form-control" [(ngModel)]="batchSize" />
+            </div>
+            <div class="col-sm-3 ">
+                <button class="btn btn-primary" (click)="addBatch()">add batch</button>
+              </div>
+    
+         
+          </div>
+        </div>
+      
+      <div class="card-block table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>SIZE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let batch of batches">
+              <td><a  [routerLink]="['/details', batch.id]"> {{batch.id}}</a> </td>
+              <td>{{batch.wanted}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>  
+  
