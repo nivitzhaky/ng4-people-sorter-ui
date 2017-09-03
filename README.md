@@ -1,5 +1,6 @@
 # PeopleSorterUi
 
+WEBLINK: http://ec2-13-59-172-49.us-east-2.compute.amazonaws.com:9002/
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
 ## Development server
