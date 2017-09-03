@@ -13,15 +13,15 @@ export class DataService {
   }
 
   getBatches(){
-    return this.http.get('http://localhost:9000/batch')
+    return this.http.get('http://ec2-13-59-172-49.us-east-2.compute.amazonaws.com:9000/batch')
       .map(res => res.json());
   }
   addBatch(b: batch){
-    return this.http.post('http://localhost:9000/batch',{id: b.id, wanted : b.wanted})
+    return this.http.post('http://ec2-13-59-172-49.us-east-2.compute.amazonaws.com:9000/batch',{id: b.id, wanted : b.wanted})
   }
 
   getBatcheById(id : String){
-    return this.http.get('http://localhost:9000/batch/' + id)
+    return this.http.get('http://ec2-13-59-172-49.us-east-2.compute.amazonaws.com:9000/batch/' + id)
       .map(res => res.json());
   }
 
