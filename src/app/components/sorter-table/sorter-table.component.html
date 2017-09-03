@@ -5,9 +5,47 @@
     <div text-align= "center" class="row navbar navbar-inverse bg-inverse navbar-toggleable-md"><a class="site-title" href="#"> Kafka "persons" topic is sorted into "adults" and "kids" topics.  offloaded to mongodb for query </a></div> 
   </nav>
 </div> -->
+<div class="body"> 
 
+<div class="table-title">
+    New Batch:<br>
+    <div class="row">
+        <div class="col-md-6">
+          <input class="form-control" type="number" name="newBatch" id="batch-count" [(ngModel)]="batchSize">
+        </div>
+        <div class="col-md-3 left-icon">
 
-<div class="row">
+        <button class="btn btn-default" (click)="addBatch()">add batch</button>
+        </div>
+    </div>
+
+    <h3>Batches</h3>
+</div>
+
+<!-- 
+        <div class="container">
+            
+        </div> -->
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th class="text-left">ID </th>
+                    <th class="text-left"> Records</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+               
+
+                    <tr *ngFor="let batch of batches">
+                        <td class="text-left"> <a [routerLink]="['/details', batch.id]">{{batch.id}}</a> </td>
+                        <td class="text-left"> {{batch.wanted}} </td>
+                    </tr>
+                
+            </tbody>
+        </table>
+</div>
+
+<!-- <div class="row">
   
 </div>
 <div class="row">
@@ -53,4 +91,4 @@
   </div>
 
 </div>  
-  
+   -->

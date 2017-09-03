@@ -22,7 +22,7 @@ export class BatchDetailsComponent implements OnInit {
 
   ngOnInit() {
     const id : string = this.route.snapshot.params["id"];
-    let timer = Observable.timer(1, 1000);
+    let timer = Observable.timer(1, 1500);
     timer.subscribe(
         t => {
           this.fillBatch(id)

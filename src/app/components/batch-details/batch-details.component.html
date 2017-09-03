@@ -1,51 +1,15 @@
-<div class="row">
-<div class="col col-sm-3"></div>
-<div class="col col-sm-6"  *ngIf="showDetails">
-    <div class="card mb-3">
-      <div class="card-header" >
-        Batch Data
-      </div>
-      <div class="card-block table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>TYPE</th>
-              <th>COUNT</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>persons</td>
-              <td>{{curBatch.persons}}</td>
-            </tr>
-            <tr>
-              <td>adults</td>
-              <td>{{curBatch.adults}}</td>
-            </tr>
-            <tr>
-              <td>kids</td>
-              <td>{{curBatch.kids}}</td>
-            </tr>
-            <tr>
-              <td>kindergarten</td>
-              <td>{{curBatch.kindergarten}}</td>
-            </tr>
-            <tr>
-              <td>elementary</td>
-              <td>{{curBatch.elementary}}</td>
-            </tr>
-            <tr>
-              <td>high</td>
-              <td>{{curBatch.high}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="card-block">
-        <canvas baseChart height="180px" [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
-        </canvas>
-      </div>
-    </div>
-  </div>
+<div class="body"> 
+<div class="form-style-2">
+    <div class="form-style-2-heading">batch statistics</div>
+    <form action="" method="post">
+        <label for="persons"><span>persons:</span><input type="text" class="input-field" name="persons" value="{{curBatch.persons}}" /></label>
+        <label for="adults"><span>adults:</span><input type="text" class="input-field" name="adults" value="{{curBatch.adults}}" /></label>
+        <label for="kids"><span>kids:</span><input type="text" class="input-field" name="kids" value="{{curBatch.kids}}" /></label>
+        <label for="kindergarten"><span>kindergarten:</span><input type="text" class="input-field" name="kindergarten" value="{{curBatch.kindergarten}}" /></label>
+        <label for="elementary"><span>elementary:</span><input type="text" class="input-field" name="elementary" value="{{curBatch.elementary}}" /></label>
+        <label for="high"><span>high:</span><input type="text" class="input-field" name="high" value="{{curBatch.high}}" /></label>
+
+
+    </form>
+</div>
 </div>
